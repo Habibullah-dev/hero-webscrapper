@@ -1,0 +1,132 @@
+
+<%- include('../partials/header')  -%> 
+<%- include('../partials/sidebar')  -%> 
+
+            <!-- ----------- main wrapper -------------->
+            <div class="col-md-10 p-2">
+               <div class="row">
+                  <div class="col py-2 text-center text-primary">
+                     <h1> <i class="fa fa-cogs"></i> Dashboard</h1>
+                     <%- include('../partials/messages') -%>
+                     <% let total = instock = outofstock = pricechanged = backinstock = updated = notupdated = 0  %> 
+                     <% products.forEach(product => {  %> 
+                        <% total++; %>
+                        <% if(product.newStock === 'In stock') { %>  
+                        <% instock++; } %> 
+                        <% if(product.newStock === 'Out of stock') { %>  
+                        <% outofstock++; } %> 
+                        <% if(product.newPrice !== product.oldPrice) { %>  
+                        <% pricechanged++; } %> 
+                        <% if(product.oldStock === 'Out of stock' && product.newStock === 'In stock' ) { %>  
+                        <% backinstock++; } %> 
+                        <% if(product.oldStock === 'Out of stock' && product.newStock === 'In stock' ) { %>  
+                        <% backinstock++; } %>
+                        <% if(product.updateStatus === 'Updated') { %>  
+                           <% updated++; } %> 
+                        <% if(product.newStock === 'Not Updated') { %>  
+                              <% notupdated++; } %> 
+                        
+                     <% }); %> 
+                  </div>
+               </div>
+
+               <div class="row my-3">
+                  <div class="col">
+                     <div class="card shadow-sm">
+                        <div class="card-body text-center bg-light text-dark">
+                           <h2>Total Product</h2>
+                           <i class="fas fa-shopping-cart fa-3x text-success px-4"></i><span class="display-4"><%= total %> </span>
+                        </div> 
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-3 my-3">
+                     <div class="rounded shadow border border-success">
+                        <div class="space bg-success" >
+                           <span></span>
+                        </div>
+                        <div class="main text-center py-3">
+                           <h3><i class="fas fa-arrow-circle-up"></i> In Stock</h3>
+                           <h2 class="display-4"><%= instock %> </h2>
+                           <hr>
+                           <a href="/product/instock" class="btn btn-outline-success">View Details <i class="fa fa-angle-double-right"></i></a>
+                        </div>
+
+                     </div>
+                  </div>
+                  <div class="col-md-3 my-3">
+                     <div class="rounded shadow border border-danger">
+                        <div class="space bg-danger" >
+                           <span></span>
+                        </div>
+                        <div class="main text-center py-3">
+                           <h3><i class="fas fa-arrow-circle-down"></i>  Out of Stock</h3>
+                           <h2 class="display-4"><%= outofstock %> </h2>
+                           <hr>
+                           <a href="/product/outofstock" class="btn btn-outline-danger">View Details <i class="fa fa-angle-double-right"></i></a>
+                        </div>
+
+                     </div>
+                  </div>
+                  <div class="col-md-3 my-3">
+                     <div class=" rounded shadow border border-info">
+                        <div class="space bg-info" >
+                           <span></span>
+                        </div>
+                        <div class="main text-center py-3">
+                           <h3><i class="fas fa-dollar-sign"> </i> Price Changed</h3>
+                           <h2 class="display-4"><%= pricechanged %> </h2>
+                           <hr>
+                           <a href="/product/pricechanged" class="btn btn-outline-info">View Details <i class="fa fa-angle-double-right"></i></a>
+                        </div>
+
+                     </div>
+                  </div>
+                  <div class="col-md-3 my-3">
+                     <div class="in-stock rounded shadow border border-warning">
+                        <div class="space bg-warning" >
+                           <span></span>
+                        </div>
+                        <div class="main text-center py-3">
+                           <h3><i class="fas fa-backward"></i> Back in Stock</h3>
+                           <h2 class="display-4"><%= backinstock %> </h2>
+                           <hr>
+                           <a href="/product/backinstock" class="btn btn-outline-warning">View Details <i class="fa fa-angle-double-right"></i></a>
+                        </div>
+
+                     </div>
+                  </div>
+            
+               </div>
+               <div class="row my-4">
+                  <div class="col-md-12 py-2">
+                     <h3 class="text-center">Product Update Information</h3>
+                  </div>
+                  <div class="col-md-6 my-3">
+                     <div class="text-center card-product border border-primary shadow py-2 rounded">
+                        <div class="space-col"></div>
+                        <div>
+                           <h4 class="text-primary">Updated Product</h4>
+                           <h1><i class="fas fa-shopping-cart"></i> <%= updated %> </h1>
+                           <hr>
+                              <a href="/product/updated" class="btn btn-outline-primary">View Details <i class="fa fa-angle-double-right"></i></a>
+                        </div>
+                     </div>
+                  
+                   </div>
+                   <div class="col-md-6 my-3">
+                     <div class="text-center card-product border border-info shadow py-2 rounded">
+                        <div class="space-col bg-info"></div>
+                        <div>
+                           <h4 class="text-info">Not Updated Product</h4>
+                           <h1><i class="fas fa-shopping-cart"></i> <%= notupdated %> </h1>
+                           <hr>
+                           <a href="/product/notupdated" class="btn btn-outline-info">View Details <i class="fa fa-angle-double-right"></i></a>
+                        </div>
+                     </div>
+                   </div>
+               </div>
+            </div>
+         
+  <%- include('../partials/footer')  -%> 

@@ -1,0 +1,50 @@
+
+<%- include('../partials/header')  -%> 
+<%- include('../partials/sidebar')  -%>
+            <!-- ----------- main wrapper -------------->
+            <div class="col-md-10 py-4">
+                <div class="row">
+                    <div class="col py-2 text-center text-primary">
+                       <h1> <i class="fas fa-search"></i> Search Products</h1>
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="col">
+                        <div class="container p-3 w-100">
+                            <%- include('../partials/messages') -%>
+                            <form class="mt-2" id="newpostform" action="/product/search" method="GET">
+                                <div class="row mt-5 justify-content-center d-flex">
+                                    <div class="col-6">
+                                        <input type="text" class="form-control" name="sku" placeholder="Enter Product SKU" required>
+                                    </div>
+                                </div>
+                    
+                                <div class="justify-content-center d-flex mt-4">
+                                    <button id="fetchBtn" class="btn btn-outline-success w-25 py-2">Search Product</button>
+                                </div>
+                            </form>
+                    
+                            <div class=" ml-5 text-left mt-5">
+
+                                <ul class="list-unstyled"> 
+                                    <li><strong>Title: </strong> <span><%= productData.title%></span></li><br>
+                                    <li><strong>Price: </strong> <span><%= productData.newPrice%></span></li><br>
+                                    <li> <strong>Stock: </strong> <span><%= productData.newStock%></span> <small><%= productData.title%></small></li><br>
+                                    <li><strong>SKU: </strong> <span><%= productData.sku%></span></li>
+                            
+                                </ul>
+                            
+                            </div>
+                    
+                        </div>
+                    </div>
+                 </div>
+                 
+
+            </div>
+           
+         </div>
+            
+
+         <%- include('../partials/footer')  -%> 
+      

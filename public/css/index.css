@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+
+:root {
+    --primary-color: #047aed;
+    --secondary-color:#1c3fa8;
+    --dark-color:#002240;
+    --light-color:#f4f4f4;
+    --success-color:#5cb85c;
+    --pink-color:#d9534f;
+}
+
+.navbar img {
+    height: 50px;
+    width: auto;
+}
+.secondary{
+    background-color: lightgray;
+}
+
+a {
+    text-decoration: none !important;
+}
+a:hover {
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--pink-color);
+}
+
+.banner {
+    background-size: cover;
+    background-position: center;
+    min-height: 600px;
+    width: 100%;
+}
+.banner span {
+    color: var(--pink-color);
+}
+.banner .text ,.banner .typed-cursor{
+    display: inline;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.primary {
+    color: orangered;
+    opacity: 1;
+}
+.typed-cursor {
+    height: 100%;
+    animation: blink 0.7s infinite;
+    -webkit-animation:blink 0.7s infinite ;
+    -moz-animation:blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
+
+.space-col{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: blue;
+}
+
+.login input , .login button{
+    border: 1px solid deepskyblue !important;
+    border-radius: 25px !important;
+    height: 50px !important;
+}
+
+.carousel-inner img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding: 5px;
+    border: 3px solid white;
+}
+.carousel-indicators {
+    bottom: -60px;
+}
+.border-bottom {
+    width: 40px;
+    height: 2px;
+    margin: 0 auto;
+    background-color: white;
+}
+.carousel-inner p {
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-top: 30px;
+}
+#accordian .panel {
+    box-shadow: none;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+#accordian .panel-heading {
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+}
+#accordian .panel-title a {
+    display: block;
+    padding: 25px 35px;
+    font-weight: 20px;
+    font-weight: 600;
+    color: white;
+    background: deepskyblue;
+    border: none;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+#accordian .panel-title a::after,
+#accordian .panel-title a.collapsed::after {
+   content: '\f068';
+   font-family: 'Font Awesome 5 free';
+   width: 40px;
+   height: 40px;
+   line-height: 32px;
+   border-radius: 50%;
+   background: deepskyblue;
+   text-align: center;
+   font-size: 15px;
+   color: white;
+   vertical-align: middle;
+   border: 5px solid white;
+   position: absolute;
+   top: 10px;
+   left: -20px;
+   transition: all 0.3s ease;
+}
+#accordian .panel-title a.collapsed::after {
+    content: '\f067';
+    font-family: 'Font Awesome 5 free';
+}
+#accordian .panel-title a:hover::after,
+#accordian .panel-title a.collapsed:hover::after {
+    transform: rotate(360deg);
+
+}
+#accordian .panel-body {
+    padding: 15px 25px;
+    background-color: #ebebeb;
+    font-size: 14px;
+    color: gray;
+    line-height: 25px;
+    border-top: none;
+    position: relative;
+}
+.panel-heading a {
+    text-decoration: none !important;
+    font-size: 15px !important;
+    font-style: italic;
+    font-weight: normal;
+}
+.freeimage img {
+    width: 100%;
+}
+.pink {
+    color: var(--pink-color);
+}
+.testimonials {
+   background-color: deepskyblue;
+}
+.carousel-inner img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    padding: 5px;
+    border: 3px solid white;
+}
+.carousel-indicators {
+    position: absolute;
+    bottom: 0;
+}
+.border-bottom {
+    width: 80px;
+    height: 2px;
+    margin: 0 auto;
+    background-color: pink;
+}
+.carousel-inner p {
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-top: 30px;
+}
+.footer {
+   background-color: dimgrey !important;
+
+}
+
+.social-icon a{
+    margin: 0 16px 20px 16px;
+    display: inline-block;
+}
+
+.footer .fab {
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 30px;
+color: deepskyblue;
+height: 50px;
+width: 50px;
+border-radius: 50%;
+background-color: white;
+border: 1px solid #34495e;
+text-align: center;
+transition: all 0.7s ease-in ;
+}
+
+.footer-logo {
+    width: 100px;
+}

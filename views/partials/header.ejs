@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scrapper</title>
+           
+      <!-------------Font Awesome cdn files------------->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+            
+    <!-------------Font Awesome cdn ends------------->
+    <link rel="shortcut icon" href="/images/favicon-32x32.png">
+     
+ 
+   <!-- Bootstrap 4.5 CSS-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- CKE-Editor-->
+<script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script> 
+<!-- Bootstrap JS Requirements -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="/css/styles.css">
+     
+</head>
+<body>
+    <!------------- Header ---------------->
+      <nav class="navbar navbar-expand-md nav navbar-light bg-light shadow-sm p-0">
+         <div class="container-fluid">
+            <a href="/" class="navbar-brand text-primary font-weight-bold font-italic ">
+               <img src="/images/logo.png" alt="">
+            </a>
+            <button class="navbar-toggler " data-toggle="collapse" data-target="#navbarCollapse">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+               <ul class="navbar-nav ml-auto">
+                  <li class="navbar-item">
+                      <div class="input-group d-flex align-items-center">
+                         <input type="text" placeholder="search..." class="form-control"> 
+                         <div class="input-group-prepend">
+                            <span class="input-group-text">
+                               <i class="fa fa-search text-success px-2"></i>
+                            </span>  
+                         </div>
+                              
+                     </div>  
+                  </li>
+               </ul>
+            
+                   <ul class="navbar-nav ml-auto">
+                     <li class="nav-item dropdown mr-3">
+                       <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                          <% if(currentUser) { %> 
+                         <i class="fa fa-user px-2"></i> Welcome <span class="text-primary"><%= currentUser.name %> </span> 
+                         <% } %> 
+                       </a>
+                       <div class="dropdown-menu bg-light" >
+                         <a href="profile.html" class="dropdown-item">
+                           <i class="fa fa-user-circle"></i> Profile
+                         </a>
+                         <a href="settings.html" class="dropdown-item">
+                           <i class="fa fa-cog"></i> Settings
+                         </a>
+                       </div>
+                     </li>
+                     <li class="nav-item">
+                        <a href="" class="nav-link" data-target="#logoutModal" data-toggle="modal" >
+                         <i class="fa fa-user-times px-2"></i>Logout
+                       </a>
+                     </li>
+                   </ul>
+
+                   <div class="modal fade" id="logoutModal">
+                      <div class="modal-dialog modal-md" >
+                         <div class="modal-content">
+                            <div class="modal-header  text-primary text-center">
+                              <h3 class="modal-title">Ready to leave?</h3>
+                              <button class="close text-danger" data-dismiss="modal"><span class="display-4">&times;</span></button>
+                            </div>
+                            <div class="modal-body text-muted">
+                               <h5>Are you sure you want to logout ?. Please click the button below</h5>
+
+                            </div>
+                            <div class="modal-footer">
+                               <button class="btn btn-secondary" data-dismiss="modal" >Close</button>
+                               <form action="/logout" method="GET">
+                                 <a href="/logout" class="btn btn-danger">Logout</a>
+                               </form>
+                            </div>
+                         </div>
+                      </div>
+
+                   </div>
+   
+               
+            </div>
+
+         </div>
+   
+      </nav>

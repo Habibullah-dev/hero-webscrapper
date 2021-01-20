@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scrapper</title>
+           
+    <!-------------Font Awesome cdn files------------->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+            
+    <!-------------Custom Style------------->
+    <link rel="shortcut icon" href="/images/favicon-32x32.png">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="css/index.css">
+     
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+     <!-- Bootstrap 4.5 CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- CKE-Editor-->
+<script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script> 
+<!-- Bootstrap JS Requirements -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+     
+</head>
+<body>
+  <header>
+    <!------------NAVIGATION------------------->
+      <nav class="navbar navbar-light navbar-expand-md shadow-md  fixed-top ">
+        <div class="container">
+          <a href="/" class="navbar-brand"><img src="/images/logo.png" alt=""></a>
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="nav navbar-nav ml-auto">
+              <li class="navbar-item p-2"><a href="/" class="navbar-link">Home</a></li>
+              <li class="navbar-item p-2"><a href="#features"  class="navbar-link smooth-scroll">Features</a></li>
+              <li class="navbar-item p-2"><a href="#pricing" class="navbar-link smooth-scroll">Pricing</a></li>
+              <li class="navbar-item p-2"><a href="#review" class="navbar-link smooth-scroll">Review</a></li>
+              <li class="navbar-item p-2"><a href="#about" class="navbar-link smooth-scroll">About</a></li>
+              <li class="navbar-item p-2"><a href="#contact" class="navbar-link smooth-scroll">Contact</a></li>
+              <li class="navbar-item p-2"><a href="/login" class="navbar-link">Login</a></li>
+            </ul>
+          </div>
+  
+        </div>
+  
+      </nav>
+  </header>
+
+   <!-------------Head Section----------------->
+  
+  <section class="head" id="head">
+     <div class="banner pt-5">
+         <div class="container">
+           <div class="row my-4">
+             <div class="col-md-6 align-self-center">
+               <h1 class="display-4 font-weight-bold text-primary my-3">HERO <span> SCRAPPING</span></h1>
+              <h4 class="text"></h4>
+              <p class="lead text-dark my-5">Web scrapping made easy with effective management of stock ,inventory
+                and online catalog.
+              </p>
+              <a href="/signup" class="btn btn-outline-primary btn-lg">Get Started For Free!</a>
+              
+             </div>
+             <div class="col-md-6 d-none d-lg-block" >
+               <img  src="/images/superhero.jpg" class="img-fluid banner-img " alt="">
+             </div>
+           </div>
+         </div>
+     </div>
+  
+   </section>
+
+     <!-------------Features Section----------------->
+     <section class="features py-5 bg-light" id="features">
+       <div class="container">
+         <div class="row wow fadeOut" data-wow-duration="1s" data-wow-delay=".4s">
+           <div class="col text-center">
+             <h2 class="text-uppercase text-primary">Why Choose Hero Webscrapping?</h2>
+             <div class="border-bottom"></div>
+             <p class="text-muted py-2">We provide powerful and effective services and assist our customer with 
+               supporting customer services </p>
+           </div>
+         </div>
+         <div class="row " >
+        
+          <div class="col-md-4 border rounded text-center p-2 card wow bounceInLeft " data-wow-duration="1s" data-wow-delay=".6s">
+        
+            <div class="product-icon">
+              <i class="fas fa-boxes fa-3x text-primary"></i> 
+            </div>
+            <h3 class="font-italic text-capitalize py-3">Inventory management </h3>
+            
+           <p class="text-center text-muted">Hero Webscrapping provide updated stock and prices.Easy to manage and use,monitor price changes and product stock
+             status.This oustanding features includes multi delete and upload.
+           </p>
+           
+          </div>
+          <div class="col-md-4 border  rounded text-center p-2 card wow bounceInDown " data-wow-duration="1s" data-wow-delay=".8s">
+          
+            <div class="product-icon">
+              <i class="fas fa-chart-line fa-3x text-warning"></i> 
+            </div>
+            <h3 class="font-italic text-capitalize py-3 wow bounceInRight " data-wow-duration="1s" data-wow-delay=".6s">Analytics</h3>
+      
+           <p class="text-center text-muted">Exclusive features for Visualization of the price change, product update and stock changes using appealing data representation 
+             .These includes bar chart , pie chart and line diagram
+           </p>
+           
+          </div>
+          <div class="col-md-4 border  rounded text-center p-2 card text-center wow bounceInRight " data-wow-duration="0.8s" data-wow-delay=".4s">
+           
+            <div class="product-icon">
+              <i class="fas fa-money-check-alt fa-3x text-success"></i>
+            </div>
+            <h3 class="font-italic text-capitalize py-3">Free trial and support</h3>
+            
+           <p class="text-muted">Try out all the features for free at no risk.If the services is satisfactory you can continue at any time.
+             Our customer services aim to deliver the best customer support for free and paid users
+           </p>
+           
+          </div>
+        </div>
+
+       </div>
+       
+     </section>
+
+<!-------------Pricing Section----------------->
+
+<section class="pricing py-5" id="pricing">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="col-md-12 text-center wow zoomIn" data-wow-duration="1s" data-wow-delay=".4s">
+          <h2 class="text-primary text-uppercase">pricing listing</h2>
+          <div class="border-bottom"></div>
+          <div class="sub-heading">
+              <p class="text-muted pt-2">
+                  Here is the list of product package
+              </p>
+              
+          </div>
+          <div class="row ">
+            <div class="col-md-4 col-sm-2 wow zoomInLeft " data-wow-duration="1s" data-wow-delay=".6s">
+              <div class="card shadow rounded p-2">
+                <div class="card-header bg-light">
+                  <div class="card-title">
+                    <h4 class="text-primary text-uppercase">Starter Pack </h4>
+                    <p>(White Belt)</p>
+                  </div>
+                </div> 
+                <div class="card-body">
+                  <h2 class="text-success display-4">Free</h2>
+                  <h5>1000 product Max</h5>
+                  <p>Starting point for low pricing and beginners</p>
+                  <hr class="p-3">
+                  <h4 class="text-primary">Package includes</h4>
+                  <ul class="list-unstyled text-dark">
+                    <li>Walmart scrapping</li>
+                    <li>Technical Support</li>
+                    <li>Smaller catalog</li>
+
+                </ul>
+                
+                </div>
+                <button class="btn btn-lg btn-block text-center btn-success">GET STARTED</button>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-2 wow zoomInDown " data-wow-duration="0.8s" data-wow-delay=".9s">
+              <div class="card shadow rounded p-2">
+                <div class="card-header bg-light">
+                  <div class="card-title">
+                    <h4 class="text-dark text-uppercase">Advanced Pack </h4>
+                    <p>(Black Belt)</p>
+                  </div>
+                </div> 
+                <div class="card-body">
+                  <h2 class="text-dark">₦100,000</h2>
+                  <small class="text-muted">bill monthly</small>
+                  <h5>unlimited product Max</h5>
+                  <p>Exclusive for Experts</p>
+                  <hr class="p-3">
+                  <h4 class="text-primary">Package includes</h4>
+                  <ul class="list-unstyled text-dark">
+                    <li>Amazon Scrapping</li>
+                    <li>Walmart Scrapping</li>
+                    <li>Jumia Scrapping</li>
+                    <li>Konga Scrapping</li>
+                    <li>Technical Support</li>
+                    <li>Data Visualization</li>
+                    <li>Large catalog</li>
+
+
+                </ul>
+                
+                </div>
+                <button class="btn btn-lg btn-block text-center btn-outline-secondary disabled">Coming soon</button>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-2 wow zoomInRight " data-wow-duration="1s" data-wow-delay=".6s">
+              <div class="card shadow rounded p-2">
+                <div class="card-header bg-light">
+                  <div class="card-title">
+                    <h4 class="pink text-uppercase">Senior Pack </h4>
+                    <p>(Red Belt)</p>
+                  </div>
+                </div> 
+                <div class="card-body">
+                  <h2 class="text-danger">₦50,000</h2>
+                  <small class="text-muted">bill monthly</small>
+                  <h5>5000 product Max</h5>
+                  <p class="text-muted">Ideal for intermediate User</p>
+                  <hr class="p-3">
+                  <h4 class="text-primary">Package includes</h4>
+                  <ul class="list-unstyled text-dark">
+                    <li>Walmart scrapping</li>
+                    <li>Jumia scrapping</li>
+                    <li>Technical Support</li>
+                    <li>Data Visualization</li>
+                    <li>Medium catalog</li>
+
+                </ul>
+                
+                </div>
+                <button class="btn btn-lg btn-block text-center btn-outline-secondary disabled">Coming soon</button>
+              </div>
+            </div>
+         
+          </div>
+      </div>
+
+      </div> 
+    </div>
+  </div>
+</section>
+
+<!-------------Reviws Section----------------->
+<section class="testimonials py-4" id="review">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center  wow fadeInDownBig">
+                <h2 class="text-primary py-2" >REVIEWS</h2>
+                <div class="border-bottom"></div>
+             
+            </div>
+        </div>
+        <div class="row  wow fadeInDownBig">
+            <div class="col-sm-12">
+                <div id="carousel-testimonials" class="carousel slide" data-ride="carousel">
+                    <br>
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-testimonials" data-slide-to='0' class="active"></li>
+                        <li data-target="#carousel-testimonials" data-slide-to='1' ></li>
+                        <li data-target="#carousel-testimonials" data-slide-to='2' ></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active text-center">
+                            <img src="/images/client-1.jpg" class="center-block " alt="">
+                            <h2>Daniel Grover</h2>
+                            <h4>Snr Engineer</h4>
+                            <p>Good Web application for web scrapping
+                            </p>
+                        </div>
+                        <div class="carousel-item  text-center">
+                            <img src="/images/client-2.jpg" class="center-block" alt="">
+                            <h2>Daniel Gr</h2>
+                            <h4>Snr Engineer</h4>
+                            <p> Great for stock and inventory tracking
+                            </p>
+                        </div>
+                        <div class="carousel-item text-center">
+                            <img src="/images/client-3.jpg" class="center-block" alt="">
+                            <h2>Daniel Grover</h2>
+                            <h4>Snr Engineer</h4>
+                            <p> High performance and appealing data visualisation
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-------------About Section----------------->
+
+<section class="faq py-4 mt-2" id="about">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12 text-center wow zoomIn" data-wow-duration=".4s" data-wow-delay=".4s">
+              <h2 class="text-primary text-uppercase">GENERAL FAQs</h2>
+              <div class="border-bottom my-3"></div>
+              <div class="sub-heading">
+                  <p class="text-muted">
+                      You can ask the question regarding the issues we will
+                      solve that together for sure
+                  </p>
+                  
+              </div>
+          </div>
+    
+      </div>
+  </div><br>
+  <div class="container wow bounceInLeft" data-wow-duration=".6s" data-wow-delay=".6s">
+      <div class="row">                    
+          <div class="col-md-7">
+              <div class="panel-group" id="accordian">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" id="headingOne">
+                        <h4 class="panel-title">
+                            <a href="#collapseOne" data-toggle="collapse" data-parent="#accordian">What is Webscrapping? ?</a>
+                        </h4>
+                       </div>  
+                      <div id="collapseOne" class="panel-collapse collapse in" aria-labelledby="headingone">
+                          <div class="panel-body">
+                              <p>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros.
+                              </p>                                        
+                          </div>                                    
+                      </div>                               
+                  </div>                           
+                                               
+                  <div class="panel panel-default">
+                    <div class="panel-heading" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a href="#collapseTwo" class="collapsed" data-toggle="collapse" data-parent="#accordian">How to get started ?</a>
+                        </h4>
+                       </div>  
+                      <div id="collapseTwo" class="panel-collapse collapse" aria-labelledby="headingTwo">
+                          <div class="panel-body">
+                              <p>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros.
+                              </p>                                        
+                          </div>                                    
+                      </div>
+                                                  
+                  </div>
+                   
+                   
+                   <div class="panel panel-default">
+                    <div class="panel-heading" id="headingThree">
+                        <h4 class="panel-title">
+                            <a href="#collapseThree" class="collapsed" data-toggle="collapse" data-parent="#accordian">Product Plan related question ?</a>
+                        </h4>
+                       </div>  
+                      <div id="collapseThree" class="panel-collapse collapse" aria-labelledby="headingThree">
+                          <div class="panel-body">
+                              <p>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros.
+                              </p>                                        
+                          </div>                                    
+                      </div>
+                                                  
+                  </div>
+                
+                   <div class="panel panel-default">
+                    <div class="panel-heading" id="headingfour">
+                        <h4 class="panel-title">
+                            <a href="#collapsefour" class="collapsed" data-toggle="collapse" data-parent="#accordian"> General support and help desk ?</a>
+                        </h4>
+                       </div>  
+                      <div id="collapsefour" class="panel-collapse collapse" aria-labelledby="headingfour">
+                          <div class="panel-body">
+                              <p>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, landit posuere tortor aliquam vitae. Curabitur molestie eros.
+                              </p>                                        
+                          </div>                                    
+                      </div>
+                                                  
+                  </div>                     
+                                  
+          </div>
+          </div>
+    
+          <div class="col-md-5 d-none d-lg-block wow bounceInRight" data-wow-duration=".8s" data-wow-delay=".8s">
+            <div class="freeimage">
+              <img src="/images/faq.jpg" class="img-responsive">
+            </div>
+           
+        </div>
+
+        </div>
+        
+      </div>
+  </div>
+
+</section>
+
+<!-- contact Us section -->
+<section class="contact py-5" id="contact">
+  <div class="row">
+    <div class="col text-center wow zoomOut " data-wow-duration="1s" data-wow-delay=".6s">
+      <h2 class="text-primary pt-3 ">Contact Us</h2>
+      <div class="border-bottom mb-3"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 align-self-center p-2">
+        <div class="w-100" >
+          <img src="/images/contact.svg "  class="w-100" alt="" class="img-fluid">
+        </div>
+
+      </div>
+      <div class="col-md-6 p-3 wow slideInLeft " data-wow-duration="1s" data-wow-delay=".6s">
+        <div class="card rounded shadow">
+          <div class="card-body">
+            <form action="/contact" method="POST">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="title" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text" id="title" class="form-control">
+          </div>
+            <div class="form-group">
+                <label for="categories">Category</label>
+                <select class="form-control" name="categories" id="categories">
+                    <option value="">Subscription</option>
+                    <option value="">Technical issue</option>
+                    <option value="">Upgrade</option>
+                    <option value="">others</option>
+                </select>
+            </div>
+          
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" ></textarea>
+            </div>
+            <button class="btn btn-primary btn-sm btn-block float-end">Send</button>
+    
+            </form>
+
+          </div>
+        </div>
+     
+
+      </div>
+    </div>
+  </div>
+
+
+</section>
+<!-- Footer Markup -->
+<footer class="footer  py-3" id="footer">
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-6 text-center align-self-start">
+              <div class="social-icon">
+                  <a href=""><i class="fab fa-facebook-f  wow fadeInLeft" data-wow-duration=".3s" data-wow-delay=".3s"></i></a>
+                  <a href=""><i class="fab fa-twitter wow fadeInLeft" data-wow-duration=".6s" data-wow-delay=".6s"></i></a>
+                  <a href=""><i class="fab fa-linkedin-in wow fadeInLeft" data-wow-duration="2.7s" data-wow-delay="2.7s"></i></a>
+              </div>
+              
+
+          </div>
+          <div class="col-sm-6 ml-auto">
+              <div class="copyright d-flex flex-row align-items-center justify-content-center">
+                  <p class="text-white mr-auto ">Copyright &copy; 2021</p>
+                  <img src="/images/logo.png" class="footer-logo"  alt="logo footer">
+              </div>
+          
+          </div>
+      </div>
+  </div>
+</footer>
+
+<script src="/js/smoothscroll.js"></script>
+<script src="/js/jquery.easing.1.3.js"></script>
+<script src="/js/wow.min.js"></script>
+<script src="/js/typed.min.js"></script>
+<script src="/js/index.js"></script>
+</body>
